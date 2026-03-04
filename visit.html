@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visit Us | Shan-E-Punjab</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR (Visit page highlighted) -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="Shane-e-punjab.html" class="logo">Shan-E-Punjab Hawker Tandoor</a>
+
+      <nav class="nav">
+        <a href="Shane-e-punjab.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="story.html">Our Story</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="visit.html" class="active">Visit Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-box">
+        <h2 class="reveal">Visit Us</h2>
+        <p class="menu-subtitle reveal">Find us at Tekka Centre — fresh naan, hot tandoor, fast service.</p>
+
+        <div class="visit-layout">
+
+          <!-- LEFT: Info -->
+          <div class="visit-info reveal">
+
+            <div class="info-card">
+              <div class="info-card-header">
+                <h3>Location</h3>
+                <div class="accent-line"></div>
+              </div>
+
+              <p class="info-line">
+                <span class="info-label">Located in:</span>
+                <span>Tekka Centre</span>
+              </p>
+
+              <p class="info-line">
+                <span class="info-label">Address:</span>
+                <span>665 Buffalo Rd, #01-271, Singapore 210665</span>
+              </p>
+
+              <div class="visit-actions">
+                <!-- Opens Google Maps directions -->
+                <a class="btn" target="_blank"
+                   href="https://www.google.com/maps/dir/?api=1&destination=665%20Buffalo%20Rd%2C%20%2301-271%2C%20Singapore%20210665">
+                  Get Directions
+                </a>
+
+                <!-- Click-to-call -->
+                <a class="btn btn-outline" href="tel:+6586471812">Call: 8647 1812</a>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-card-header">
+                <h3>Opening Hours</h3>
+                <div class="accent-line"></div>
+              </div>
+
+              <div class="hours-grid">
+                <div class="hours-row"><span>Monday</span><span>11:00 am – 10:30 pm</span></div>
+                <div class="hours-row"><span>Tuesday</span><span>11:00 am – 10:30 pm</span></div>
+                <div class="hours-row"><span>Wednesday</span><span>11:00 am – 10:30 pm</span></div>
+                <div class="hours-row"><span>Thursday</span><span>11:00 am – 10:30 pm</span></div>
+                <div class="hours-row"><span>Friday</span><span>11:00 am – 10:30 pm</span></div>
+                <div class="hours-row"><span>Saturday</span><span>11:00 am – 10:30 pm</span></div>
+                <div class="hours-row"><span>Sunday</span><span>11:00 am – 10:30 pm</span></div>
+              </div>
+
+              <p class="small-note">
+                *Wednesdays may be closed*
+              </p>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: Map -->
+          <div class="visit-map reveal">
+            <div class="map-card">
+              <div class="info-card-header">
+                <h3>Map</h3>
+                <div class="accent-line"></div>
+              </div>
+
+              <!-- Google Maps embed (works without API key) -->
+              <div class="map-embed">
+                <iframe
+                  title="Shan-E-Punjab - Tekka Centre"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps?q=665%20Buffalo%20Rd%20%2301-271%20Singapore%20210665&output=embed">
+                </iframe>
+              </div>
+
+              <div class="map-hint">
+                Tip: Tekka Centre is busiest during lunch/dinner — come a bit earlier for shorter queues.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="section-actions reveal">
+          <a class="btn" href="Shane-e-punjab.html">← Back Home</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SCROLL REVEAL SCRIPT -->
+  <script>
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll(".reveal");
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+
+</body>
+</html>

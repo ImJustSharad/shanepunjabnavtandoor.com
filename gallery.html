@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Shan-E-Punjab</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR (Gallery page highlighted) -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+
+      <a href="Shane-e-punjab.html" class="logo">
+        Shan-E-Punjab Hawker Tandoor
+      </a>
+
+      <nav class="nav">
+        <a href="Shane-e-punjab.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="story.html">Our Story</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="visit.html">Visit Us</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <section class="section">
+    <div class="container">
+      <div class="section-box">
+        <h2 class="reveal">Gallery</h2>
+        <p class="menu-subtitle reveal">A look inside the stall : the food, the fire and the rush.</p>
+
+        <!-- BIG SHOWCASE LAYOUT -->
+        <div class="gallery-showcase">
+
+          <!-- 1 -->
+          <div class="gallery-row reveal">
+            <div class="gallery-img">
+              <img src="shane punjab 1 .png" alt="Shan-E-Punjab stall front with customers">
+            </div>
+            <div class="gallery-text">
+              <h3>Where the Flavours Come Alive</h3>
+              <p>A lively hawker atmosphere where fresh indian food is prepared, the heart of Shan-E-Punjab in motion.</p>
+            </div>
+          </div>
+
+          <!-- 2 (reversed) -->
+          <div class="gallery-row reverse reveal">
+            <div class="gallery-img">
+              <img src="shane punjab 2 .png" alt="Kitchen preparation inside the stall">
+            </div>
+            <div class="gallery-text">
+              <h3>Crafted Fresh, Every Day</h3>
+              <p>From dough to curry, every dish is prepared by hand using traditional techniques and years of experience.</p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="gallery-row reveal">
+            <div class="gallery-img">
+              <img src="shane punjab 3.png" alt="Crowd gathered at Shan-E-Punjab stall">
+            </div>
+            <div class="gallery-text">
+              <h3>A Local Favourite</h3>
+              <p>Loved by locals and visitors alike, our stall brings people together through authentic North Indian comfort food.</p>
+            </div>
+          </div>
+
+          <!-- 4 (reversed) -->
+          <div class="gallery-row reverse reveal">
+            <div class="gallery-img">
+              <img src="tandoor 1.png" alt="Tandoor oven with heat and charcoal">
+            </div>
+            <div class="gallery-text">
+              <h3>The Soul of the Kitchen</h3>
+              <p>Our traditional clay tandoor powers the smoky flavours and soft, blistered breads that define Punjabi cooking.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="section-actions reveal">
+          <a class="btn" href="Shane-e-punjab.html">← Back Home</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SCROLL REVEAL SCRIPT -->
+  <script>
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll(".reveal");
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+
+</body>
+</html>

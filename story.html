@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story | Shan-E-Punjab</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR (Our Story highlighted) -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+
+      <a href="Shane-e-punjab.html" class="logo">
+        Shan-E-Punjab Hawker Tandoor
+      </a>
+
+      <nav class="nav">
+        <a href="Shane-e-punjab.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="story.html" class="active">Our Story</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="visit.html">Visit Us</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <section class="section">
+    <div class="container">
+      <div class="section-box">
+
+        <h2 class="reveal">Our Story</h2>
+        <p class="menu-subtitle reveal">From Himachal to the hawker heart of Singapore.</p>
+
+        <!-- STORY HERO QUOTE -->
+        <div class="story-quote reveal">
+          <div class="story-quote-bar"></div>
+          <div class="story-quote-text">
+            <h3>Built on craft, not shortcuts.</h3>
+            <p>
+              Shan-E-Punjab is driven by one simple belief:
+              <span class="story-accent">good food should be honest, fresh, and made with skill</span> —
+              whether it’s served in a five-star kitchen or a hawker stall.
+            </p>
+          </div>
+        </div>
+
+        <!-- STORY SHOWCASE -->
+        <div class="story-showcase">
+
+          <!-- 1 -->
+          <div class="story-row reveal">
+            <div class="story-img">
+              <img src="papa 3.jpeg" alt="Suresh in India">
+            </div>
+            <div class="story-text">
+              <h3>Himachal Roots</h3>
+              <p>
+                Born and raised in <span class="story-accent">Himachal Pradesh</span>, a northern state in India,
+                Suresh didn’t grow up wealthy or privileged — but he grew up surrounded by
+                bold spices, warm hospitality, and the rhythm of home-cooked food.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2 (reversed) -->
+          <div class="story-row reverse reveal">
+            <div class="story-img">
+              <img src="papa 1.png" alt="Suresh portrait">
+            </div>
+            <div class="story-text">
+              <h3>Learning the Art</h3>
+              <p>
+                What started as curiosity became discipline. He studied hard, trained consistently,
+                and fell in love with the <span class="story-accent">craft of cooking</span> —
+                learning technique, timing, and flavour balance the proper way.
+              </p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="story-row reveal">
+            <div class="story-img">
+              <img src="papa 2.png" alt="Suresh with another chef">
+            </div>
+            <div class="story-text">
+              <h3>A Global Journey</h3>
+              <p>
+                Suresh travelled and worked across different kitchens — including the US, Bali and Sentosa —
+                learning unique cuisines and sharpening his skills under pressure.
+                Over time, he became a <span class="story-accent">five-star sous chef</span> and worked in a
+                <span class="story-accent">Michelin-star restaurant</span>.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4 (final message) -->
+          <div class="story-row reverse reveal">
+            <div class="story-img">
+              <img src="shane punjab 2 .png" alt="Shan-e-punjab">
+            </div>
+            <div class="story-text">
+              <h3>Back to the Real Thing</h3>
+              <p>
+                Today, that same experience comes to life in the hawker scene —
+                where the fire is real, the naan is fresh, and the flavours speak for themselves.
+                <span class="story-accent">Shan-E-Punjab is tradition, technique, and heart — served daily.</span>
+              </p>
+
+              <div class="story-mini-card">
+                <div class="story-mini-dot"></div>
+                <p><strong>What we’re known for:</strong> tandoori naans, butter chicken, chicken tikka, and comforting curries.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="section-actions reveal">
+          <a class="btn" href="Shane-e-punjab.html">← Back Home</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SCROLL REVEAL SCRIPT -->
+  <script>
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll(".reveal");
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+
+</body>
+</html>
